@@ -208,25 +208,25 @@ module.exports = function toReadable (number) {
                             text_number = text_number + twenty
                             break;
                         case '3':
-                            text_number = text_number + '' + thirty
+                            text_number = text_number + thirty
                             break;
                         case '4':
-                            text_number = text_number + '' + forty
+                            text_number = text_number + forty
                             break;
                         case '5':
-                            text_number = text_number + '' + fifty
+                            text_number = text_number + fifty
                             break;
                         case '6':
-                            text_number = text_number + '' + sixty
+                            text_number = text_number + sixty
                             break;
                         case '7':
-                            text_number = text_number + '' + seventy
+                            text_number = text_number + seventy
                             break;
                         case '8':
-                            text_number = text_number + '' + eighty
+                            text_number = text_number + eighty
                             break;
                         case '9':
-                            text_number = text_number + '' + ninety
+                            text_number = text_number + ninety
                             break;
                     }
                 }
