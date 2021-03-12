@@ -34,15 +34,15 @@ module.exports = function toReadable (number) {
                 break;
         }
     }
-    let one = 'one'
-    let two = 'two'
-    let three = 'three'
-    let four = 'four'
-    let five = 'five'
-    let six = 'six'
-    let seven = 'seven'
-    let eight = 'eight'
-    let nine = 'nine'
+    let one = 'one '
+    let two = 'two '
+    let three = 'three '
+    let four = 'four '
+    let five = 'five '
+    let six = 'six '
+    let seven = 'seven '
+    let eight = 'eight '
+    let nine = 'nine '
     let ten = 'ten'
     let eleven = 'eleven'
     let twelve = 'twelve'
@@ -53,14 +53,14 @@ module.exports = function toReadable (number) {
     let seventeen = 'seventeen'
     let eighteen = 'eighteen'
     let nineteen = 'nineteen'
-    let twenty ='twenty'
-    let thirty = 'thirty'
-    let forty = 'forty'
-    let fifty = 'fifty'
-    let sixty= 'sixty'
-    let seventy = 'seventy'
-    let eighty = 'eighty'
-    let ninety = 'ninety'
+    let twenty ='twenty '
+    let thirty = 'thirty '
+    let forty = 'forty '
+    let fifty = 'fifty '
+    let sixty= 'sixty '
+    let seventy = 'seventy '
+    let eighty = 'eighty '
+    let ninety = 'ninety '
     let hundred = 'hundred '
     number = String(number);
     if (number.length === 1){
@@ -171,38 +171,37 @@ module.exports = function toReadable (number) {
                 if (i === 0){
                     switch (number[i]){
                         case '1':
-                            text_number = one + ' ' + hundred
+                            text_number = one + hundred
                             break;
                         case '2':
-                            text_number = two + ' ' + hundred
+                            text_number = two + hundred
                             break;
                         case '3':
-                            text_number = three + ' ' + hundred
+                            text_number = three + hundred
                             break;
                         case '4':
-                            text_number = four + ' ' + hundred
+                            text_number = four + hundred
                             break;
                         case '5':
-                            text_number = five + ' ' + hundred
+                            text_number = five + hundred
                             break;
                         case '6':
-                            text_number = six + ' ' + hundred
+                            text_number = six + hundred
                             break;
                         case '7':
-                            text_number = seven + ' ' + hundred
+                            text_number = seven + hundred
                             break;
                         case '8':
-                            text_number = eight + ' ' + hundred
+                            text_number = eight + hundred
                             break;
                         case '9':
-                            text_number = nine + ' ' + hundred
+                            text_number = nine + hundred
                             break;
                     }
                 }
                 if (i === 1){
                     switch (number[i]){
                         case '0':
-                            text_number = text_number + ''
                             break;
                         case '2':
                             text_number = text_number + twenty
@@ -233,34 +232,33 @@ module.exports = function toReadable (number) {
                 if (i === 2){
                     switch (number[i]){
                         case '0':
-                            text_number += ''
                             break;
                         case '1':
-                            text_number = text_number +' ' + one
+                            text_number = text_number + one
                             break;
                         case '2':
-                            text_number = text_number +' ' + two
+                            text_number = text_number + two
                             break;
                         case '3':
-                            text_number = text_number +' ' + three
+                            text_number = text_number + three
                             break;
                         case '4':
-                            text_number = text_number +' ' + four
+                            text_number = text_number + four
                             break;
                         case '5':
-                            text_number = text_number +' ' + five
+                            text_number = text_number + five
                             break;
                         case '6':
-                            text_number = text_number +' ' + six
+                            text_number = text_number + six
                             break;
                         case '7':
-                            text_number = text_number +' ' + seven
+                            text_number = text_number + seven
                             break;
                         case '8':
-                            text_number = text_number +' ' + eight
+                            text_number = text_number + eight
                             break;
                         case '9':
-                            text_number = text_number +' ' + nine
+                            text_number = text_number + nine
                             break;
                     }
 
@@ -301,6 +299,9 @@ module.exports = function toReadable (number) {
                 }
                 if (i === 1){
                     switch (number[i+1]) {
+                        case '0':
+                            text_number = text_number + '' + ten
+                            break;
                         case '1':
                             text_number = text_number + '' + eleven
                             break;
