@@ -61,7 +61,7 @@ module.exports = function toReadable (number) {
     let seventy = 'seventy'
     let eighty = 'eighty'
     let ninety = 'ninety'
-    let hundred = 'hundred '
+    let hundred = 'hundred'
     number = String(number);
     if (number.length === 1){
         switch (number){
@@ -99,71 +99,74 @@ module.exports = function toReadable (number) {
         return text_number;
     }
     if (number.length === 2){
-        for (let i = 0; i <number.length ; i++){
-            if (i === 0){
-                switch (number[i]){
-                    case '2':
-                        text_number = twenty
-                        break;
-                    case '3':
-                        text_number = thirty
-                        break;
-                    case '4':
-                        text_number = forty
-                        break;
-                    case '5':
-                        text_number = fifty
-                        break;
-                    case '6':
-                        text_number = sixty
-                        break;
-                    case '7':
-                        text_number = seventy
-                        break;
-                    case '8':
-                        text_number = eighty
-                        break;
-                    case '9':
-                        text_number = ninety
-                        break;
+        if (number[0] !== '1'){
+            for (let i = 0; i <number.length ; i++){
+                if (i === 0){
+                    switch (number[i]){
+                        case '2':
+                            text_number = twenty
+                            break;
+                        case '3':
+                            text_number = thirty
+                            break;
+                        case '4':
+                            text_number = forty
+                            break;
+                        case '5':
+                            text_number = fifty
+                            break;
+                        case '6':
+                            text_number = sixty
+                            break;
+                        case '7':
+                            text_number = seventy
+                            break;
+                        case '8':
+                            text_number = eighty
+                            break;
+                        case '9':
+                            text_number = ninety
+                            break;
+                    }
                 }
-            }
-            if (i === 1){
-                switch (number[i]){
-                    case '0':
-                        text_number += ''
-                        break;
-                    case '1':
-                        text_number = text_number +' ' + one
-                        break;
-                    case '2':
-                        text_number = text_number +' ' + two
-                        break;
-                    case '3':
-                        text_number = text_number +' ' + three
-                        break;
-                    case '4':
-                        text_number = text_number +' ' + four
-                        break;
-                    case '5':
-                        text_number = text_number +' ' + five
-                        break;
-                    case '6':
-                        text_number = text_number +' ' + six
-                        break;
-                    case '7':
-                        text_number = text_number +' ' + seven
-                        break;
-                    case '8':
-                        text_number = text_number +' ' + eight
-                        break;
-                    case '9':
-                        text_number = text_number +' ' + nine
-                        break;
-                }
+                if (i === 1){
+                    switch (number[i]){
+                        case '0':
+                            text_number += ''
+                            break;
+                        case '1':
+                            text_number = text_number +' ' + one
+                            break;
+                        case '2':
+                            text_number = text_number +' ' + two
+                            break;
+                        case '3':
+                            text_number = text_number +' ' + three
+                            break;
+                        case '4':
+                            text_number = text_number +' ' + four
+                            break;
+                        case '5':
+                            text_number = text_number +' ' + five
+                            break;
+                        case '6':
+                            text_number = text_number +' ' + six
+                            break;
+                        case '7':
+                            text_number = text_number +' ' + seven
+                            break;
+                        case '8':
+                            text_number = text_number +' ' + eight
+                            break;
+                        case '9':
+                            text_number = text_number +' ' + nine
+                            break;
+                    }
 
+                }
             }
         }
+
     }
     if (number.length === 3){
         if (number[1] !== '1'){
@@ -207,32 +210,31 @@ module.exports = function toReadable (number) {
                             text_number = text_number + ' ' + twenty
                             break;
                         case '3':
-                            text_number = text_number + thirty
+                            text_number = text_number + ' ' + thirty
                             break;
                         case '4':
-                            text_number = text_number + forty
+                            text_number = text_number + ' ' + forty
                             break;
                         case '5':
-                            text_number = text_number + fifty
+                            text_number = text_number + ' ' + fifty
                             break;
                         case '6':
-                            text_number = text_number + sixty
+                            text_number = text_number + ' ' + sixty
                             break;
                         case '7':
-                            text_number = text_number + seventy
+                            text_number = text_number + ' ' + seventy
                             break;
                         case '8':
-                            text_number = text_number + eighty
+                            text_number = text_number + ' ' + eighty
                             break;
                         case '9':
-                            text_number = text_number + ninety
+                            text_number = text_number + ' ' + ninety
                             break;
                     }
                 }
                 if (i === 2){
                     switch (number[i]){
                         case '0':
-                            text_number += ''
                             break;
                         case '1':
                             text_number = text_number +' ' + one
@@ -301,34 +303,34 @@ module.exports = function toReadable (number) {
                 if (i === 1){
                     switch (number[i+1]) {
                         case '0':
-                            text_number = text_number + '' + ten
+                            text_number = text_number + ' ' + ten
                             break;
                         case '1':
-                            text_number = text_number + '' + eleven
+                            text_number = text_number + ' ' + eleven
                             break;
                         case '2':
-                            text_number = text_number + '' + twelve
+                            text_number = text_number + ' ' + twelve
                             break;
                         case '3':
-                            text_number = text_number + '' + thirteen
+                            text_number = text_number + ' ' + thirteen
                             break;
                         case '4':
-                            text_number = text_number + '' + fourteen
+                            text_number = text_number + ' ' + fourteen
                             break;
                         case '5':
-                            text_number = text_number + '' + fifteen
+                            text_number = text_number + ' ' + fifteen
                             break;
                         case '6':
-                            text_number = text_number + '' + sixteen
+                            text_number = text_number + ' ' + sixteen
                             break;
                         case '7':
-                            text_number = text_number + '' + seventeen
+                            text_number = text_number + ' ' + seventeen
                             break;
                         case '8':
-                            text_number = text_number + '' + eighteen
+                            text_number = text_number + ' ' + eighteen
                             break;
                         case '9':
-                            text_number = text_number + '' + nineteen
+                            text_number = text_number + ' ' + nineteen
                             break;
                     }
                 }
